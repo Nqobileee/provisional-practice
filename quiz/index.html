@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>VID Provisional Practice — Road Test Quiz</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Floating navigation bar -->
+<nav class="floating-nav" id="nav">
+  <div class="nav-inner">
+    <div class="brand" id="brandHome">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l8 4v5c0 4.4-3.1 7.9-8 9-4.9-1.1-8-4.6-8-9V7l8-4z" fill="currentColor" opacity=".25"/><path d="M12 3l8 4v5c0 4.4-3.1 7.9-8 9-4.9-1.1-8-4.6-8-9V7l8-4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <span class="brand-text">VID&nbsp;<b>Provisional</b>&nbsp;Practice</span>
+    </div>
+    <div class="nav-status" id="navStatus">
+      <span class="nav-pill" id="setPill" hidden>Set <b id="setPillNum">1</b></span>
+      <span class="nav-pill timer" id="timerPill" hidden>
+        <span class="timer-dot"></span><span id="timerText">08:00</span>
+      </span>
+      <button class="nav-btn ghost" id="quitBtn" hidden>Quit</button>
+      <button class="nav-btn" id="homeBtn" hidden>Home</button>
+    </div>
+  </div>
+</nav>
+
+<main id="app">
+
+  <!-- ===================== HOME ===================== -->
+  <section id="homeView" class="view">
+    <header class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2l8 3.5V11c0 5-3.4 8.7-8 9.8C7.4 19.7 4 16 4 11V5.5L12 2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+          Zimbabwe Provisional · Highway Code
+        </span>
+        <h1>Pass your <span class="grad">Provisional</span><br>Driver's Test</h1>
+        <p class="sub">400 official-style questions across 16 sets. Each set is 25 questions on an
+          <b>8-minute</b> countdown — answers are revealed only when the session ends.</p>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-ic r" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="3" width="13" height="17" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M19 7v12a2 2 0 0 1-2 2H8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M7.5 8h6M7.5 11.5h6M7.5 15h3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="stat-num">400</span><span class="stat-lbl">Questions</span></span>
+          </div>
+          <div class="stat">
+            <span class="stat-ic o" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.8"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.8"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.8"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.6" stroke="currentColor" stroke-width="1.8"/></svg></span>
+            <span><span class="stat-num">16</span><span class="stat-lbl">Sets of 25</span></span>
+          </div>
+          <div class="stat">
+            <span class="stat-ic y" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13" r="8" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v4l2.5 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 2.5h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span><span class="stat-num">08:00</span><span class="stat-lbl">Per set</span></span>
+          </div>
+        </div>
+
+        <div class="cta-row">
+          <button class="btn-primary big" id="startFirstBtn">
+            Start Set 1
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h13M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <span class="hint">or pick any set below</span>
+        </div>
+      </div>
+
+      <!-- Hero illustration -->
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 440 380" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#fff6ec"/><stop offset="1" stop-color="#ffe9d2"/>
+            </linearGradient>
+            <linearGradient id="carBody" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#f4642a"/><stop offset="1" stop-color="#e23b2e"/>
+            </linearGradient>
+          </defs>
+
+          <!-- panel -->
+          <rect x="8" y="8" width="424" height="364" rx="26" fill="url(#sky)"/>
+
+          <!-- sun arc -->
+          <circle cx="92" cy="92" r="46" fill="#fbbf24" opacity=".9"/>
+          <circle cx="92" cy="92" r="46" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3 9" opacity=".7"/>
+
+          <!-- hills -->
+          <path d="M8 250c70-46 150-46 210 0s150 28 214-8v122a26 26 0 0 1-26 26H34a26 26 0 0 1-26-26V250z" fill="#ffd9a8" opacity=".55"/>
+
+          <!-- road -->
+          <path d="M150 372l52-150a16 16 0 0 1 30 0l52 150H150z" fill="#5b4e46"/>
+          <path d="M214 222a8 8 0 0 1 14 0l5 14h-24l5-14z" fill="#6b5d54"/>
+          <!-- lane dashes -->
+          <g fill="#ffd9a8">
+            <rect x="216" y="236" width="8" height="20" rx="4"/>
+            <rect x="214.5" y="272" width="11" height="22" rx="5"/>
+            <rect x="212.5" y="312" width="15" height="26" rx="6"/>
+          </g>
+
+          <!-- car (rear 3/4) -->
+          <g transform="translate(196 250)">
+            <ellipse cx="24" cy="78" rx="34" ry="8" fill="#3a312c" opacity=".18"/>
+            <rect x="2" y="20" width="44" height="56" rx="14" fill="url(#carBody)"/>
+            <path d="M8 30c2-9 6-13 16-13s14 4 16 13l-3 4H11l-3-4z" fill="#ffe1b0"/>
+            <rect x="11" y="34" width="26" height="15" rx="5" fill="#2a211c" opacity=".82"/>
+            <rect x="7" y="58" width="10" height="8" rx="3" fill="#fbbf24"/>
+            <rect x="31" y="58" width="10" height="8" rx="3" fill="#fbbf24"/>
+            <rect x="18" y="62" width="12" height="9" rx="2.5" fill="#fff" opacity=".9"/>
+            <text x="24" y="69.5" text-anchor="middle" font-family="Segoe UI, Arial" font-size="8" font-weight="800" fill="#e23b2e">L</text>
+          </g>
+
+          <!-- traffic light -->
+          <g transform="translate(330 150)">
+            <rect x="14" y="92" width="8" height="70" rx="4" fill="#7a6a60"/>
+            <rect x="0" y="0" width="36" height="92" rx="12" fill="#2a211c"/>
+            <circle cx="18" cy="22" r="11" fill="#e23b2e"/>
+            <circle cx="18" cy="46" r="11" fill="#fbbf24"/>
+            <circle cx="18" cy="70" r="11" fill="#1f9d62" opacity=".4"/>
+            <circle cx="18" cy="22" r="14" fill="none" stroke="#e23b2e" stroke-width="2" opacity=".35"/>
+          </g>
+
+          <!-- warning triangle sign -->
+          <g transform="translate(70 168)">
+            <rect x="22" y="58" width="6" height="46" rx="3" fill="#7a6a60"/>
+            <path d="M25 6l23 42a3.5 3.5 0 0 1-3 5.2H5a3.5 3.5 0 0 1-3-5.2L25 6z" fill="#fff" stroke="#e23b2e" stroke-width="4.5" stroke-linejoin="round"/>
+            <rect x="22.5" y="22" width="5" height="16" rx="2.5" fill="#2a211c"/>
+            <circle cx="25" cy="45" r="3" fill="#2a211c"/>
+          </g>
+
+          <!-- round speed sign -->
+          <g transform="translate(112 96)">
+            <circle cx="20" cy="20" r="19" fill="#fff" stroke="#e23b2e" stroke-width="5"/>
+            <text x="20" y="26" text-anchor="middle" font-family="Segoe UI, Arial" font-size="16" font-weight="800" fill="#2a211c">60</text>
+          </g>
+        </svg>
+      </div>
+    </header>
+
+    <h2 class="section-title"><span class="bar"></span> Choose a set</h2>
+    <div class="set-grid" id="setGrid"></div>
+  </section>
+
+  <!-- ===================== QUIZ ===================== -->
+  <section id="quizView" class="view" hidden>
+    <div class="quiz-head">
+      <div>
+        <h2 id="quizTitle">Set 1</h2>
+        <p class="quiz-sub">Select an answer for each question, then submit. The clock stops the quiz at zero.</p>
+      </div>
+      <div class="progress-wrap">
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <span class="progress-text"><b id="answeredCount">0</b> / <span id="totalCount">25</span> answered</span>
+      </div>
+    </div>
+    <div id="questionList"></div>
+    <div class="quiz-foot">
+      <button class="btn-primary big" id="submitBtn">
+        Submit &amp; See Score
+        <svg viewBox="0 0 24 24" fill="none"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+      <p class="foot-note">You can review every question with the correct answer after submitting.</p>
+    </div>
+  </section>
+
+  <!-- ===================== RESULTS ===================== -->
+  <section id="resultView" class="view" hidden>
+    <div class="result-card">
+      <div class="score-ring" id="scoreRing">
+        <svg viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+          <circle class="ring-fg" id="ringFg" cx="60" cy="60" r="52"></circle>
+        </svg>
+        <div class="score-center">
+          <span id="scorePct">0%</span>
+          <small id="scoreFrac">0 / 25</small>
+        </div>
+      </div>
+      <div class="result-meta">
+        <h2 id="resultHeadline">Set complete</h2>
+        <p id="resultMsg" class="result-msg"></p>
+        <p id="timeUsedMsg" class="time-used"></p>
+        <div class="result-actions">
+          <button class="btn-primary" id="reviewBtn">Review Answers</button>
+          <button class="btn-outline" id="retryBtn">Retry Set</button>
+          <button class="btn-ghost" id="backHomeBtn">Back to Sets</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="reviewList" class="review-list" hidden></div>
+  </section>
+
+</main>
+
+<footer class="page-foot">
+  <p>Study tool built from VID provisional practice material · Diagrams shown where available.</p>
+</footer>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
