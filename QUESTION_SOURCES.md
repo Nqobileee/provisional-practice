@@ -109,7 +109,7 @@ Every question is sourced from **VID.pdf** (text + correct answers). Diagrams co
 | 98 | 4 | 23 | The rider of a motor cycle has right to | Use of a full lane | VID.pdf p.16 | — |
 | 99 | 4 | 24 | A person riding a motorbike must wear | A crash helmet | VID.pdf p.16 | — |
 | 100 | 4 | 25 | When approaching this sign: | I am being warned the hazard ahead is... | VID.pdf p.16 | null (1).pdf p.22 |
-| 101 | 5 | 1 | Which car stops? | Car A | VID.pdf p.16 | null (1).pdf p.35 |
+| 101 | 5 | 1 | Which car stops? | Car A | VID.pdf p.16 | VID.xlsx (same diagram as Q292, Q359) |
 | 102 | 5 | 2 | Which car is not breaking the law? | Car C | VID.pdf p.17 | — |
 | 103 | 5 | 3 | This sign indicates? | Direction | VID.pdf p.17 | Recreated SVG (standard sign) |
 | 104 | 5 | 4 | Driving instructor is exempted from wearing a safety belt | When conducting driving lessons | VID.pdf p.17 | — |

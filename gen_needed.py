@@ -7,7 +7,14 @@ def corr(q): return next((o['text'] for o in q['options'] if o['correct']), '')
 def norm(s): return re.sub(r'\s+', ' ', re.sub(r'[^a-z0-9 ]', ' ', s.lower())).strip()
 
 NEED = re.compile(r'which cars?|this sign|the sign (warns|indicates|means)|at this sign|approaching this sign|this road sign|this traffic light|seeing this sign|meaning of this sign|setup below|such an incline|insignia|grouping of road signs|four way junction|uncontrolled intersection')
-def needs(q): return bool(NEED.search(q['question'].lower()))
+NO_IMAGE = re.compile(
+    r'\binsignia\b|four way junction|at an uncontrolled intersection, i should give right of way'
+)
+def needs(q):
+    t = q['question'].lower()
+    if NO_IMAGE.search(t):
+        return False
+    return bool(NEED.search(t))
 
 CATEGORY_ANS = {'a triangle','a circle','a rectangle','a direction sign','for information purposes only','is for information','is for warning','a regulatory sign','an informative sign','a danger warning sign'}
 def cat(q):
