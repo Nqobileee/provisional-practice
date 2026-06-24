@@ -4,7 +4,7 @@
   var DATA = window.QUIZ_DATA || [];
   var SET_SIZE = 25;
   var SET_SECONDS = 8 * 60;
-  var PASS_PCT = 76;
+  var PASS_MARK = 22; // correct answers (out of 25) required to pass
   var LETTERS = ["A", "B", "C", "D", "E"];
   var STORE_KEY = "zh_progress_v1";
   var CIRC = 2 * Math.PI * 52; // ring circumference
@@ -244,7 +244,7 @@
     });
     var total = state.questions.length;
     var pct = Math.round(correct / total * 100);
-    var passed = pct >= PASS_PCT;
+    var passed = correct >= PASS_MARK;
 
     // persist
     var prev = progress[state.setIndex] || { best: 0, attempts: 0 };
@@ -264,10 +264,10 @@
     head.textContent = passed ? "Test Passed" : "Test Incomplete";
     head.className = "display " + (passed ? "pass" : "fail");
     $("resultMsg").textContent = passed
-      ? "System analysis complete. You have met the safety threshold for the Zimbabwe Highway Code."
+      ? "System analysis complete. You scored " + correct + " of " + total + " and met the pass mark of " + PASS_MARK + "."
       : (byTimeout
-          ? "Time expired. You scored " + correct + " of " + total + " — review the breakdown and retry the set."
-          : "You scored " + correct + " of " + total + ". Reach " + PASS_PCT + "% to clear this module.");
+          ? "Time expired. You scored " + correct + " of " + total + " — the pass mark is " + PASS_MARK + ". Review and retry the set."
+          : "You scored " + correct + " of " + total + ". Score " + PASS_MARK + " or more to clear this module.");
 
     buildBreakdown(correct);
     buildReview();

@@ -271,9 +271,30 @@ svg{display:block}
   .result-cards{grid-template-columns:1fr}
   .cells{grid-template-columns:repeat(13,1fr)}
 }
-@media(max-width:520px){
-  .brand-text{font-size:14px}
-  #app{padding-top:84px}
+@media(max-width:560px){
+  #app{padding-top:86px;padding-left:14px;padding-right:14px}
+  .floating-nav{top:10px;width:calc(100% - 20px)}
+  .nav-inner{gap:7px;padding:8px 10px}
+  .brand-text{display:none}              /* keep the mark as the logo */
+  .brand-mark{width:28px;height:28px}
+  .nav-pill,.nav-btn{padding:7px 10px;font-size:11px;letter-spacing:.6px}
+  .nav-btn.ghost{padding:7px 9px}
   .q-text{font-size:18px}
+  .q-card{padding:20px 18px 18px}
+  .quiz-bar{padding:15px 18px}
   .quiz-bar .big-count{font-size:24px}
+  .dash-hero{padding:24px 20px}
+  .hero-left .display{font-size:30px}
+  .result-hero{padding:30px 20px 26px}
+  .quiz-nav{gap:8px}
+  .btn-outline{padding:11px 14px}
+  .btn-primary{padding:12px 16px}
+  .dots{gap:5px}
+  .dot{width:8px;height:8px}
+  .section-title{font-size:15px}
+  .section-row .muted{font-size:11px}
+}
+@media(max-width:380px){
+  .nav-pill#setPill{display:none}        /* set # already shown in quiz bar */
+  .cells{grid-template-columns:repeat(13,1fr)}
 }
