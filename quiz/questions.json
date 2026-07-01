@@ -4823,7 +4823,7 @@
   "options": [
    {
     "text": "Road has been temporarily narrowed to the left",
-    "correct": false
+    "correct": true
    },
    {
     "text": "Road has been temporarily narrowed to the right",
@@ -4831,7 +4831,7 @@
    },
    {
     "text": "Road has been temporarily narrowed to the centre",
-    "correct": true
+    "correct": false
    }
   ],
   "vid_page": 35,
@@ -8698,7 +8698,7 @@
   "question": "A speed restriction sign means:",
   "options": [
    {
-    "text": "Do not exceed the stated speed",
+    "text": "Watch out for the police",
     "correct": false
    },
    {
