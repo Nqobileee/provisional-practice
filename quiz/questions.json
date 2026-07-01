@@ -2065,7 +2065,7 @@
   "vid_page": 15,
   "id": 94,
   "set": 4,
-  "image": "img/vid/094.png"
+  "image": null
  },
  {
   "test": "",
@@ -2219,7 +2219,7 @@
   "vid_page": 16,
   "id": 101,
   "set": 5,
-  "image": "img/vid/292.png"
+  "image": "img/vid/101.png"
  },
  {
   "test": "",
@@ -2231,11 +2231,11 @@
    },
    {
     "text": "Car C",
-    "correct": true
+    "correct": false
    },
    {
     "text": "Car B",
-    "correct": false
+    "correct": true
    }
   ],
   "vid_page": 17,
@@ -2813,7 +2813,7 @@
   "vid_page": 21,
   "id": 128,
   "set": 6,
-  "image": "img/041_p22c1.png"
+  "image": null
  },
  {
   "test": "",
@@ -5013,7 +5013,7 @@
   "vid_page": 37,
   "id": 228,
   "set": 10,
-  "image": "img/signs/traffic_light_ahead.svg"
+  "image": "img/vid/228.png"
  },
  {
   "test": "",
@@ -7191,7 +7191,7 @@
   "vid_page": 52,
   "id": 327,
   "set": 14,
-  "image": null
+  "image": "img/vid/327.png"
  },
  {
   "test": "",
